@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+
+        <header>
+            
+            <div id="headerdiv">
+            <div>
+                <img src="home-3.png">
+                <a href="#home"><p>Home</p></a>
+            </div>
+
+
+
+            <div>
+                <img src="user-4.png">
+                <a href="user.html"><p>User</p></a>
+
+            </div>
+
+
+
+            <div>
+                <img src="open-book.png">
+                <a href="Documentation.html"><p>Documentation</p></a>
+
+            </div>
+
+
+
+
+            <div>
+                <img src="pen-2.png">
+                <a href="Changelog.html"><p>Change Log</p></a>
+
+            </div>
+
+
+
+
+
+            <div>
+                <img src="line-chart.png">
+                <a href="graphs.html"><p>Stats & Graphs</p></a>
+
+            </div>
+
+
+
+
+
+
+
+            <div>
+                <img src="heart-4.png">
+                <a href="Donate.html"><p>Donate</p></a>
+
+            </div>
+
+
+
+
+
+
+
+            <div>
+                <img src="copyright-2.png">
+                <a href="copyright.html"><p>copyright Notice</p></a>
+
+            </div>
+
+
+
+
+            <div>
+                <img src="ps.png">
+                <a href="Photoshop.html"><p> PhotoshopEtension</p></a>
+
+            </div>
+
+
+
+
+
+</div>
+        </header>
+
+
+
+
+        <nav>
+            <h1> RANDOM USER GENERATOR</h1>
+
+            <h4> A free, <a href="#">open-source</a> API for generating random user data. Like Lorem ipsum, but for people. </h4>
+
+
+            <h6><img src="twitter-2.png"> Follow us @randomapi</h6>
+
+
+
+
+        </nav>
+
+
+        <section>
+            <div class="ashcolour">
+
+            </div>
+
+            <div class="imagecircle">
+                <img id="picture" src="">
+
+            </div> 
+
+
+            <h5>Hi, my name is </h5>
+
+            <h1 id="name"></h1>
+            <h2 class="email"></h2>
+            <h2 class="dob"></h2>
+            <h2 class="location"></h2>
+            <h2 class="number"></h2>
+            <h2 class="password"></h2>
+
+            <div class="changetogreen">
+
+               <button onclick="nam()"> <img src="user-5.png"></button>
+               <button  onmouseover="email()"> <img src="mail.png"></button>
+              <button onmouseover="date()"> <img src="calendar.png"> </button> 
+               <button onmouseover="locatio()"> <img src="location.png"> </button> 
+              <button onmouseover="phone()">  <img src="telephone.png"> </button> 
+              <button onmouseover="password()"> <img src="padlock.png"> </button> 
+
+            </div>
+
+
+
+        </section>
+
+
+    </div>
+
+
+
+
+
+
+    <script>
+      
+ fetch("https://randomuser.me/api/")
+.then((res)=>res.json())
+.then((data)=> {document.querySelector("#name").innerHTML = data.results[0].name.title + "   " + data.results[0].name.first + "   " + data.results[0].name.last, document.querySelector("#picture").src= data.results[0].picture.large,
+ document.querySelector(".email").innerHTML = "my email is:" + data.results [0].email,
+ document.querySelector(".dob").innerHTML = "I'm" + " " + data.results [0].dob.age + " " + "years old",
+ document.querySelector(".location").innerHTML = "my address is :" + data.results [0].location.street.number + data.results [0].location.street.name,
+ document.querySelector(".number").innerHTML = "my phone number is :" + data.results [0].phone
+ document.querySelector(".password").innerHTML = "my password is :" + data.results [0].login.password
+} )
+
+
+// fetch("https://randomuser.me/api/")
+// .then((res)=>res.json())
+// .then((data)=>document.querySelector("#picture").src= data.results[0].picture.large)
+// .catch((error)=>console.log(error))
+
+
+// const email = () => {
+//     document.querySelector("h5").innerHTML = "My email address is "
+
+//     fetch("https://randomuser.me/api/")
+//     .then((res)=>res.json())
+//     .then((data)=> document.querySelector("#name").innerHTML = data.results [0].email)
+//     .catch((error)=>console.log(error))
+    
+// }
+
+// const date = () => {
+//     document.querySelector("h5").innerHTML = "My birthday is "
+
+//     fetch("https://randomuser.me/api/")
+//     .then((res)=>res.json())
+//     .then((data)=> document.querySelector("#name").innerHTML = data.results [0].dob.date)
+//     .catch((error)=>console.log(error))
+    
+// }
+
+// const locatio = () => {
+//     document.querySelector("h5").innerHTML = "My address is "
+
+//     fetch("https://randomuser.me/api/")
+//     .then((res)=>res.json())
+//     .then((data)=> document.querySelector("#name").innerHTML = data.results [0].location.street.number + data.results [0].location.street.name)
+//     .catch((error)=>console.log(error))
+    
+// }
+
+
+// const phone = () => {
+//     document.querySelector("h5").innerHTML = "My phone number is "
+
+//     fetch("https://randomuser.me/api/")
+//     .then((res)=>res.json())
+//     .then((data)=> document.querySelector("#name").innerHTML = data.results [0].phone)
+//     .catch((error)=>console.log(error))
+    
+// }
+
+
+// const password = () => {
+//     document.querySelector("h5").innerHTML = "My password\ is "
+
+//     fetch("https://randomuser.me/api/")
+//     .then((res)=>res.json())
+//     .then((data)=> document.querySelector("#name").innerHTML = data.results [0].login.password)
+//     .catch((error)=>console.log(error))
+    
+// }
+    </script>
+    
+</body>
+</html>

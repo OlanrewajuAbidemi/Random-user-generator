@@ -1,0 +1,187 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family: sans-serif;
+    background-color: #F9F9F9;
+}
+#container{
+    width: 100vw;
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+}
+header{
+    width: 100vw;
+    height: 70px;
+ background-color: black;
+ justify-content: center;
+ text-align: center;
+ align-items: center;
+ position:fixed;
+}
+#headerdiv{
+   
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: flex;
+    background-color: black;
+     justify-content: end;
+     text-align: center;
+     margin: auto;
+}
+#headerdiv div{
+    background-color: black;
+}
+header a{
+    color: white;
+    text-decoration: none;
+    
+}
+nav{
+    background-color: #2C2E31;
+    height: 560px;
+    padding-top: 50px;
+}
+nav h1{
+    color: white;
+    font-size: 50px;
+    font-weight: lighter;
+    margin-bottom: 30px;
+    margin-left: -15px;
+    margin-top: 70px;
+}
+nav h4{
+    color: white;
+    font-size: 20px;
+    width: 500px;
+    font-weight: lighter;
+    margin-bottom: 30px;
+    
+}
+nav a{
+    color: #2A657C;
+}
+nav h6{
+    color: #737476;
+}
+
+section{
+    width: 800px;
+    background-color: #FFFFFF;
+    height: 450px;
+    text-align: center;
+    margin: auto;
+    margin-top: -230px;
+
+}
+.ashcolour{
+    height: 120px;
+    background-color: #F9F9F9;
+    border-bottom: 2px solid #D8D8D8;
+}
+.imagecircle{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #D8D8D8;
+    background-color: white;
+    justify-content: center;
+    margin: auto;
+    margin-top: -100px;
+}
+#picture{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+section h5{
+    color: #A4A4A4;
+    font-size: x-large;
+    font-weight: lighter;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+section h1{
+    font-size: 50px;
+}
+.changetogreen{
+    display: flex;
+    justify-content: space-around;
+    width: 600px;
+    margin: auto;
+    margin-top: 50px;
+}
+.changetogreen button{
+
+    border: none;
+    background-color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width:1024px) {
+    header{
+    width: 100vw;
+ background-color: black;
+ justify-content: center;
+ text-align: center;
+ align-items: center;
+ position:fixed;
+}
+#headerdiv{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 70%;
+    display: flex;
+    background-color: black;
+     justify-content: space-between;
+     text-align: center;
+     margin: auto;
+}
+}
+
+
+
+@media (min-width:739px) {
+    header{
+    
+        width: 100vw;
+     background-color: black;
+     justify-content: center;
+     text-align: center;
+     align-items: center;
+     position:fixed;
+    }
+    #headerdiv{
+        padding-top: 5px;
+        padding-bottom: 5px;
+        display: flex;
+        background-color: black;
+         justify-content: space-between;
+         text-align: center;
+         margin: auto;
+    }
+    nav h4{
+        width: auto;
+    }
+    
+}
