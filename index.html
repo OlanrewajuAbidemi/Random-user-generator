@@ -7,12 +7,17 @@
     <title>Document</title>
 </head>
 <body>
+
     <div id="container">
 
         <header>
+
             
             <div id="headerdiv">
+                <button onclick="closeb()" class="close"><img src="close.png"></button>
+
             <div>
+
                 <img src="home-3.png">
                 <a href="#home"><p>Home</p></a>
             </div>
@@ -96,6 +101,8 @@
 
 
         <nav>
+            <button onclick="showup()"><img src="hamburger-2.png"></button>
+
             <h1> RANDOM USER GENERATOR</h1>
 
             <h4> A free, <a href="#">open-source</a> API for generating random user data. Like Lorem ipsum, but for people. </h4>
@@ -123,15 +130,15 @@
             <h5>Hi, my name is </h5>
 
             <h1 id="name"></h1>
-            <h2 class="email"></h2>
+            <!-- <h2 class="email"></h2>
             <h2 class="dob"></h2>
             <h2 class="location"></h2>
             <h2 class="number"></h2>
-            <h2 class="password"></h2>
+            <h2 class="password"></h2> -->
 
             <div class="changetogreen">
 
-               <button onclick="nam()"> <img src="user-5.png"></button>
+               <button id="namebutton"> <img src="user-5.png"></button>
                <button  onmouseover="email()"> <img src="mail.png"></button>
               <button onmouseover="date()"> <img src="calendar.png"> </button> 
                <button onmouseover="locatio()"> <img src="location.png"> </button> 
@@ -151,18 +158,56 @@
 
 
 
-
     <script>
+
+
+
+const showup = () => {
+ document.getElementById("headerdiv").style.display="grid";
+ document.querySelector("header").style.display= "grid"
+//  document.querySelector(" nav button"). style.display = "none"
+}
+const closeb = () => {
+    document.getElementById("headerdiv").style.display="none";
+ document.querySelector("header").style.display= "none"
+//  document.querySelector(" nav button"). style.display = "none"
+}
+
+
+  const add = () =>{
+    return fetch("https://randomuser.me/api/")
+    .then((res)=>res.json())
+
+      .catch((error)=>console.log(error))
+
+  }  
+  let name = document.getElementById('name');
+    let namebutton = document.getElementById('namebutton');
+
+    namebutton.addEventListener('mouseover', async () => {
+      let jsonData = await add;
+      console.log(jsonData)
+
+      name.textcontent = jsonData.name ;
+    });
+
+
+
+
+
+  
+  
+
+// .then((data)=> {document.querySelector("#name").innerHTML = data.results[0].name.title + "   " + data.results[0].name.first + "   " + data.results[0].name.last,
+//  document.querySelector("#picture").src= data.results[0].picture.large
+// document.querySelector(".email").innerHTML = "my email is:" + data.results [0].email,
+//  document.querySelector(".dob").innerHTML = "I'm" + " " + data.results [0].dob.age + " " + "years old",
+//  document.querySelector(".location").innerHTML = "my address is :" + data.results [0].location.street.number + data.results [0].location.street.name,
+//  document.querySelector(".number").innerHTML = "my phone number is :" + data.results [0].phone
+//  document.querySelector(".password").innerHTML = "my password is :" + data.results [0].login.password
+//  .catch((error)=>console.log(error))
+    // }) 
       
- fetch("https://randomuser.me/api/")
-.then((res)=>res.json())
-.then((data)=> {document.querySelector("#name").innerHTML = data.results[0].name.title + "   " + data.results[0].name.first + "   " + data.results[0].name.last, document.querySelector("#picture").src= data.results[0].picture.large,
- document.querySelector(".email").innerHTML = "my email is:" + data.results [0].email,
- document.querySelector(".dob").innerHTML = "I'm" + " " + data.results [0].dob.age + " " + "years old",
- document.querySelector(".location").innerHTML = "my address is :" + data.results [0].location.street.number + data.results [0].location.street.name,
- document.querySelector(".number").innerHTML = "my phone number is :" + data.results [0].phone
- document.querySelector(".password").innerHTML = "my password is :" + data.results [0].login.password
-} )
 
 
 // fetch("https://randomuser.me/api/")
@@ -174,7 +219,8 @@
 // const email = () => {
 //     document.querySelector("h5").innerHTML = "My email address is "
 
-//     fetch("https://randomuser.me/api/")
+//     // // fetch("https://randomuser.me/api/")
+//     globalFetch
 //     .then((res)=>res.json())
 //     .then((data)=> document.querySelector("#name").innerHTML = data.results [0].email)
 //     .catch((error)=>console.log(error))
@@ -222,6 +268,14 @@
 //     .catch((error)=>console.log(error))
     
 // }
+
+//  async function add (){
+//     console.log("add")
+// }
+ 
+// add() .then(()=>{console.log("sucessful")}).catch((error)=>console.log(error))
+
+// console.log("sub")
     </script>
     
 </body>

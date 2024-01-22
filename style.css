@@ -7,28 +7,33 @@ body{
     width: 100vw;
     height: 100vh;
     font-family: sans-serif;
-    background-color: #F9F9F9;
+    /* background-color: #F9F9F9; */
+
 }
 #container{
     width: 100vw;
     margin: auto;
     justify-content: center;
     text-align: center;
+    background-color: rgb(249,249,249);
+
 }
 header{
     width: 100vw;
     height: 70px;
+    display: none;
  background-color: black;
  justify-content: center;
  text-align: center;
  align-items: center;
  position:fixed;
 }
+
 #headerdiv{
-   
+   width: 100vw;
     padding-top: 5px;
     padding-bottom: 5px;
-    display: flex;
+    display: none;
     background-color: black;
      justify-content: end;
      text-align: center;
@@ -37,30 +42,44 @@ header{
 #headerdiv div{
     background-color: black;
 }
+
+.close{
+    background-color: black;
+    border: none;
+    /* margin-left: -120px; */
+}
 header a{
     color: white;
     text-decoration: none;
     
 }
 nav{
+    width: 100vw;
     background-color: #2C2E31;
-    height: 560px;
-    padding-top: 50px;
+    height: 550px;
+    padding-top: 40px;
+}
+nav button{
+    background-color: #2C2E31;
+    border: none;
+    margin-left: 330px;
+    margin-top: -40px;
+
 }
 nav h1{
     color: white;
-    font-size: 50px;
+    font-size: 40px;
     font-weight: lighter;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     margin-left: -15px;
     margin-top: 70px;
 }
 nav h4{
     color: white;
-    font-size: 20px;
-    width: 500px;
+    font-size: 15px;
+    /* width: 500px; */
     font-weight: lighter;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     
 }
 nav a{
@@ -71,9 +90,9 @@ nav h6{
 }
 
 section{
-    width: 800px;
+    width: 90vw;
     background-color: #FFFFFF;
-    height: 450px;
+    height: 300px;
     text-align: center;
     margin: auto;
     margin-top: -230px;
@@ -114,7 +133,7 @@ section h1{
 .changetogreen{
     display: flex;
     justify-content: space-around;
-    width: 600px;
+    /* width: 100vw; */
     margin: auto;
     margin-top: 50px;
 }
@@ -165,6 +184,7 @@ section h1{
     header{
     
         width: 100vw;
+        display: flex;
      background-color: black;
      justify-content: center;
      text-align: center;
@@ -183,5 +203,18 @@ section h1{
     nav h4{
         width: auto;
     }
+    nav button{
+        display: none;
+    }
+    .close{
+        display: none;
+    }
     
 }
+
+
+
+
+
+
+
